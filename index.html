@@ -90,55 +90,55 @@
 
     <!-- 歡迎入口頁 (Splash Screen) -->
     <div id="welcomeOverlay">
-        <div class="text-center px-4 max-w-2xl">
-            <div class="mb-10 transform transition-transform hover:scale-105 duration-700">
-                <!-- 放大兩倍的入口 Logo (原 w-32/40 -> 現 w-64/80) -->
-                <img src="https://i.postimg.cc/KzHC4qcs/400165-removebg-preview.png" alt="FB Logo" class="w-64 h-64 md:w-80 md:h-80 mx-auto object-contain drop-shadow-xl">
+        <div class="text-center px-6 max-w-2xl">
+            <div class="mb-6 md:mb-10 transform transition-transform hover:scale-105 duration-700">
+                <!-- 響應式 Logo：手機 w-48, 電腦 w-80 -->
+                <img src="https://i.postimg.cc/KzHC4qcs/400165-removebg-preview.png" alt="FB Logo" class="w-48 h-48 md:w-80 md:h-80 mx-auto object-contain drop-shadow-xl">
             </div>
-            <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-6 tracking-tight">東大技高英文漫畫館</h1>
-            <p class="text-stone-500 sans tracking-[0.3em] uppercase text-sm mb-12">謝政倫老師 策展設計</p>
+            <h1 class="text-3xl md:text-5xl font-bold text-slate-800 mb-4 md:mb-6 tracking-tight">東大技高英文漫畫館</h1>
+            <p class="text-stone-500 sans tracking-[0.2em] md:tracking-[0.3em] uppercase text-xs md:text-sm mb-10 md:mb-12">謝政倫老師 策展設計</p>
             
-            <button id="enterBtn" class="sans group relative px-16 py-5 bg-slate-800 text-white font-bold rounded-full overflow-hidden transition-all hover:bg-slate-700 shadow-2xl">
-                <span class="relative z-10 flex items-center gap-3 text-lg">
-                    <i data-lucide="book-open" class="w-6 h-6"></i>
+            <button id="enterBtn" class="sans group relative px-10 py-4 md:px-16 md:py-5 bg-slate-800 text-white font-bold rounded-full overflow-hidden transition-all hover:bg-slate-700 shadow-2xl">
+                <span class="relative z-10 flex items-center justify-center gap-3 text-base md:text-lg">
+                    <i data-lucide="book-open" class="w-5 h-5 md:w-6 md:h-6"></i>
                     開啟館藏並播放音樂
                 </span>
                 <div class="absolute inset-0 bg-amber-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
             </button>
-            <div id="loadingStatus" class="mt-8 text-xs text-stone-400 sans uppercase tracking-widest opacity-60">
+            <div id="loadingStatus" class="mt-6 md:mt-8 text-[10px] md:text-xs text-stone-400 sans uppercase tracking-widest opacity-60">
                 正在同步雲端書架與縮圖...
             </div>
         </div>
     </div>
 
     <!-- Header -->
-    <header class="relative bg-white border-b border-gray-100 py-20 px-4">
+    <header class="relative bg-white border-b border-gray-100 py-12 md:py-20 px-4">
         <div class="container mx-auto text-center relative z-10">
             <div class="flex flex-col items-center">
-                <!-- 放大兩倍的標題 Logo (原 w-24/32 -> 現 w-48/64) -->
+                <!-- 響應式 Logo：手機 w-40, 電腦 w-64 -->
                 <a href="https://www.facebook.com/share/1DqfKtz6S1/" target="_blank" 
                    onclick="playClick()"
-                   class="fb-hero-btn mb-10 bg-white p-2 rounded-full inline-block transition-all hover:scale-110">
-                    <img src="https://i.postimg.cc/KzHC4qcs/400165-removebg-preview.png" alt="FB Logo" class="w-48 h-48 md:w-64 md:h-64 object-contain">
+                   class="fb-hero-btn mb-8 md:mb-10 bg-white p-2 rounded-full inline-block transition-all hover:scale-110">
+                    <img src="https://i.postimg.cc/KzHC4qcs/400165-removebg-preview.png" alt="FB Logo" class="w-40 h-40 md:w-64 md:h-64 object-contain">
                 </a>
                 
-                <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-slate-800 mb-6">
-                    東大技高英文 <span class="text-amber-700 underline decoration-stone-200 underline-offset-[12px]">漫畫館</span>
+                <h1 class="text-3xl md:text-6xl font-bold tracking-tight text-slate-800 mb-4 md:mb-6">
+                    東大技高英文 <span class="text-amber-700 underline decoration-stone-200 underline-offset-[8px] md:underline-offset-[12px]">漫畫館</span>
                 </h1>
-                <p class="text-base md:text-xl text-slate-500 font-medium sans tracking-[0.4em] uppercase opacity-80 mb-12">
+                <p class="text-sm md:text-xl text-slate-500 font-medium sans tracking-[0.2em] md:tracking-[0.4em] uppercase opacity-80 mb-10 md:mb-12">
                     謝政倫老師 策展設計
                 </p>
             </div>
             
-            <div class="flex flex-wrap justify-center items-center gap-6 sans">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 sans">
                 <a href="https://www.facebook.com/share/1DqfKtz6S1/" target="_blank" onclick="playClick()"
-                   class="flex items-center gap-3 bg-slate-800 text-white px-10 py-4 rounded-full hover:bg-slate-700 transition shadow-lg text-lg">
-                    <i data-lucide="facebook" class="w-6 h-6 fill-white"></i>
+                   class="w-full md:w-auto flex items-center justify-center gap-3 bg-slate-800 text-white px-8 md:px-10 py-4 rounded-full hover:bg-slate-700 transition shadow-lg text-base md:text-lg">
+                    <i data-lucide="facebook" class="w-5 h-5 md:w-6 md:h-6 fill-white"></i>
                     <span class="font-bold">追蹤粉專</span>
                 </a>
 
-                <button id="musicToggle" class="flex items-center gap-3 border-2 border-slate-200 text-slate-600 px-8 py-4 rounded-full hover:bg-slate-50 transition text-lg">
-                    <i data-lucide="music" class="w-6 h-6"></i>
+                <button id="musicToggle" class="w-full md:w-auto flex items-center justify-center gap-3 border-2 border-slate-200 text-slate-600 px-8 py-4 rounded-full hover:bg-slate-50 transition text-base md:text-lg">
+                    <i data-lucide="music" class="w-5 h-5 md:w-6 md:h-6"></i>
                     <span id="musicText" class="font-bold">背景音樂</span>
                 </button>
             </div>
@@ -146,54 +146,54 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 -mt-10 relative z-20">
+    <main class="container mx-auto px-4 -mt-6 md:-mt-10 relative z-20">
         
         <!-- Search & Filters -->
-        <div class="bg-white border border-stone-100 p-8 rounded-3xl shadow-sm mb-16 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div class="bg-white border border-stone-100 p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-sm mb-12 md:mb-16 flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-8">
             <div class="relative w-full lg:max-w-xl sans">
-                <i data-lucide="search" class="absolute left-5 top-1/2 -translate-y-1/2 text-stone-400 w-6 h-6"></i>
-                <input type="text" id="searchInput" placeholder="在館藏中搜尋單元..." 
-                    class="w-full pl-14 pr-8 py-4 bg-stone-50 border-none rounded-2xl focus:ring-2 focus:ring-amber-200 outline-none text-slate-700 text-lg">
+                <i data-lucide="search" class="absolute left-5 top-1/2 -translate-y-1/2 text-stone-400 w-5 h-5 md:w-6 md:h-6"></i>
+                <input type="text" id="searchInput" placeholder="搜尋館藏單元..." 
+                    class="w-full pl-12 md:pl-14 pr-6 md:pr-8 py-3 md:py-4 bg-stone-50 border-none rounded-xl md:rounded-2xl focus:ring-2 focus:ring-amber-200 outline-none text-slate-700 text-base md:text-lg">
             </div>
             
-            <div class="flex flex-wrap justify-center gap-3 sans" id="filterGroup">
-                <button class="filter-btn active px-8 py-3 rounded-xl text-sm font-bold bg-stone-50 text-stone-500 hover:bg-stone-100" data-book="All">全部藏書</button>
-                <button class="filter-btn px-8 py-3 rounded-xl text-sm font-bold bg-stone-50 text-stone-500 hover:bg-stone-100" data-book="Book 1">Book 1</button>
-                <button class="filter-btn px-8 py-3 rounded-xl text-sm font-bold bg-stone-50 text-stone-500 hover:bg-stone-100" data-book="Book 2">Book 2</button>
-                <button class="filter-btn px-8 py-3 rounded-xl text-sm font-bold bg-stone-50 text-stone-500 hover:bg-stone-100" data-book="Book 4">Book 4</button>
-                <button class="filter-btn px-8 py-3 rounded-xl text-sm font-bold bg-stone-50 text-stone-500 hover:bg-stone-100" data-book="Book 6">Book 6</button>
+            <div class="flex flex-wrap justify-center gap-2 md:gap-3 sans" id="filterGroup">
+                <button class="filter-btn active px-4 md:px-8 py-2 md:py-3 rounded-lg md:rounded-xl text-xs md:text-sm font-bold bg-stone-50 text-stone-500 hover:bg-stone-100" data-book="All">全部</button>
+                <button class="filter-btn px-4 md:px-8 py-2 md:py-3 rounded-lg md:rounded-xl text-xs md:text-sm font-bold bg-stone-50 text-stone-500 hover:bg-stone-100" data-book="Book 1">B1</button>
+                <button class="filter-btn px-4 md:px-8 py-2 md:py-3 rounded-lg md:rounded-xl text-xs md:text-sm font-bold bg-stone-50 text-stone-500 hover:bg-stone-100" data-book="Book 2">B2</button>
+                <button class="filter-btn px-4 md:px-8 py-2 md:py-3 rounded-lg md:rounded-xl text-xs md:text-sm font-bold bg-stone-50 text-stone-500 hover:bg-stone-100" data-book="Book 4">B4</button>
+                <button class="filter-btn px-4 md:px-8 py-2 md:py-3 rounded-lg md:rounded-xl text-xs md:text-sm font-bold bg-stone-50 text-stone-500 hover:bg-stone-100" data-book="Book 6">B6</button>
             </div>
         </div>
 
         <!-- Grid -->
-        <div id="comicGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10"></div>
+        <div id="comicGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-10"></div>
 
         <!-- Empty State -->
-        <div id="emptyState" class="hidden text-center py-32">
-            <p class="text-stone-400 text-xl italic sans">查無相關館藏資料</p>
+        <div id="emptyState" class="hidden text-center py-20 md:py-32">
+            <p class="text-stone-400 text-base md:text-xl italic sans">查無相關館藏資料</p>
         </div>
     </main>
 
     <!-- Modal -->
-    <div id="previewModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+    <div id="previewModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-2 md:p-4">
         <div class="modal-overlay absolute inset-0"></div>
-        <div class="modal-content relative bg-white rounded-2xl overflow-hidden max-w-4xl w-full max-h-[92vh] flex flex-col scale-90 transition-transform duration-300">
-            <div class="flex items-center justify-between p-8 border-b border-stone-100 bg-stone-50">
+        <div class="modal-content relative bg-white rounded-xl md:rounded-2xl overflow-hidden max-w-4xl w-full max-h-[94vh] flex flex-col scale-90 transition-transform duration-300">
+            <div class="flex items-center justify-between p-4 md:p-8 border-b border-stone-100 bg-stone-50">
                 <div class="flex flex-col">
-                    <span id="modalBook" class="text-xs sans font-bold text-amber-700 uppercase tracking-[0.2em] mb-1">ARCHIVE</span>
-                    <h3 id="modalTitle" class="text-2xl font-bold text-slate-800">Title</h3>
+                    <span id="modalBook" class="text-[10px] md:text-xs sans font-bold text-amber-700 uppercase tracking-widest mb-1">ARCHIVE</span>
+                    <h3 id="modalTitle" class="text-lg md:text-2xl font-bold text-slate-800 line-clamp-1">Title</h3>
                 </div>
-                <button id="closeModal" class="p-3 hover:bg-stone-200 rounded-full transition-colors" onclick="playPop()">
-                    <i data-lucide="x" class="w-8 h-8 text-stone-500"></i>
+                <button id="closeModal" class="p-2 md:p-3 hover:bg-stone-200 rounded-full transition-colors" onclick="playPop()">
+                    <i data-lucide="x" class="w-6 h-6 md:w-8 md:h-8 text-stone-500"></i>
                 </button>
             </div>
-            <div class="flex-1 overflow-auto bg-stone-100 p-10 flex items-center justify-center">
+            <div class="flex-1 overflow-auto bg-stone-100 p-4 md:p-10 flex items-center justify-center">
                 <div class="group relative cursor-pointer" id="modalImageLink">
-                    <img id="modalImg" src="" alt="Preview" class="max-w-full shadow-2xl border-4 border-white rounded-sm">
+                    <img id="modalImg" src="" alt="Preview" class="max-w-full shadow-2xl border-2 md:border-4 border-white rounded-sm">
                     <div class="absolute inset-0 flex items-center justify-center bg-slate-900/0 group-hover:bg-slate-900/40 transition-all">
-                        <div class="bg-white/95 sans px-10 py-4 rounded-sm shadow-2xl opacity-0 group-hover:opacity-100 transition-all flex items-center gap-3">
-                            <i data-lucide="external-link" class="w-5 h-5 text-slate-800"></i>
-                            <span class="text-slate-800 font-bold text-lg">開啟全文閱讀</span>
+                        <div class="bg-white/95 sans px-6 py-3 md:px-10 md:py-4 rounded-sm shadow-2xl opacity-0 group-hover:opacity-100 transition-all flex items-center gap-2 md:gap-3">
+                            <i data-lucide="external-link" class="w-4 h-4 md:w-5 md:h-5 text-slate-800"></i>
+                            <span class="text-slate-800 font-bold text-sm md:text-lg">開啟全文閱讀</span>
                         </div>
                     </div>
                 </div>
@@ -213,19 +213,18 @@
     </audio>
 
     <!-- Footer -->
-    <footer class="mt-40 border-t border-stone-200 py-24 text-center sans">
+    <footer class="mt-20 md:mt-40 border-t border-stone-200 py-16 md:py-24 text-center sans px-6">
         <a href="https://www.facebook.com/share/1DqfKtz6S1/" target="_blank" 
-           class="inline-flex flex-col items-center group mb-12">
-            <img src="https://i.postimg.cc/KzHC4qcs/400165-removebg-preview.png" alt="FB" class="w-24 h-24 grayscale hover:grayscale-0 transition-all duration-700 opacity-60 hover:opacity-100">
-            <span class="mt-6 text-stone-400 group-hover:text-stone-800 font-medium tracking-[0.3em] text-base">謝政倫老師 教學粉絲專頁</span>
+           class="inline-flex flex-col items-center group mb-10 md:mb-12">
+            <img src="https://i.postimg.cc/KzHC4qcs/400165-removebg-preview.png" alt="FB" class="w-16 h-16 md:w-24 md:h-24 grayscale hover:grayscale-0 transition-all duration-700 opacity-60 hover:opacity-100">
+            <span class="mt-4 md:mt-6 text-stone-400 group-hover:text-stone-800 font-medium tracking-widest text-xs md:text-base">謝政倫老師 教學粉絲專頁</span>
         </a>
         <div class="flex flex-col gap-4">
-            <p class="text-stone-400 text-xs tracking-[0.2em] leading-loose max-w-2xl mx-auto px-4">
+            <p class="text-stone-400 text-[10px] md:text-xs tracking-widest leading-loose max-w-2xl mx-auto">
                 CURATED BY XIE ZHENGLUN / FOR EDUCATIONAL USE ONLY<br>
                 漫畫內容權利歸屬原作者與謝政倫老師所有
             </p>
-            <!-- Acknowledgement Section -->
-            <p class="text-stone-300 text-[10px] sans uppercase tracking-[0.3em] mt-6">
+            <p class="text-stone-300 text-[8px] md:text-[10px] sans uppercase tracking-[0.2em] mt-4">
                 Acknowledgement: Music & SFC Powered by Pixabay
             </p>
         </div>
@@ -241,7 +240,6 @@
 
         lucide.createIcons();
 
-        // 音頻對象
         const bgMusic = document.getElementById('bgMusic');
         const clickSound = document.getElementById('clickSound');
         const popSound = document.getElementById('popSound');
@@ -251,7 +249,6 @@
         const enterBtn = document.getElementById('enterBtn');
         const loadingStatus = document.getElementById('loadingStatus');
 
-        // 音效播放
         function playClick() {
             clickSound.currentTime = 0;
             clickSound.volume = 0.5;
@@ -264,28 +261,18 @@
             popSound.play();
         }
 
-        // 入口按鈕控制：觸發 BGM 並進入網頁
         enterBtn.addEventListener('click', () => {
             playClick();
-            
-            // 開始背景音樂
             bgMusic.volume = 0.3;
             bgMusic.play().catch(e => console.log("BGM play failed", e));
             isMusicPlaying = true;
-            
-            // UI 更新
             musicText.innerText = "音樂播放中";
             musicToggle.classList.add('bg-stone-800', 'text-white');
-            
-            // 隱藏入口層
             welcomeOverlay.style.opacity = '0';
             welcomeOverlay.style.visibility = 'hidden';
-            
-            // 恢復頁面滾動
             document.body.style.overflow = 'auto';
         });
 
-        // BGM 切換按鈕
         musicToggle.addEventListener('click', () => {
             playClick();
             if (!isMusicPlaying) {
@@ -301,7 +288,6 @@
             isMusicPlaying = !isMusicPlaying;
         });
 
-        // 離開分頁或隱藏時停止音樂
         document.addEventListener("visibilitychange", function() {
             if (document.hidden && isMusicPlaying) {
                 bgMusic.pause();
@@ -310,7 +296,6 @@
             }
         });
 
-        // 解析 CSV
         function parseCSVLine(line) {
             const result = [];
             let cell = '';
@@ -327,10 +312,10 @@
             return result;
         }
 
-        // 圖片預載入函式
         function preloadImages(data) {
             let loadedCount = 0;
             const total = data.length;
+            if (total === 0) return;
             data.forEach(item => {
                 if (item.imageUrl) {
                     const img = new Image();
@@ -362,10 +347,7 @@
                     };
                 });
 
-                // 立即開始預載入圖片
                 preloadImages(allData);
-                
-                // 渲染初始畫面
                 renderGrid();
             } catch (error) {
                 console.error('Error fetching CSV:', error);
@@ -432,25 +414,25 @@
             emptyState.classList.add('hidden');
             grid.innerHTML = filtered.map((item, index) => `
                 <div class="comic-card rounded-xl overflow-hidden flex flex-col">
-                    <div class="aspect-[4/3] bg-stone-50 p-8 flex items-center justify-center cursor-zoom-in relative group" 
+                    <div class="aspect-[4/3] bg-stone-50 p-6 md:p-8 flex items-center justify-center cursor-zoom-in relative group" 
                          onclick='openModal(${JSON.stringify(item).replace(/'/g, "&apos;")})'>
                         <img src="${item.imageUrl || 'https://via.placeholder.com/400x300?text=Archive+Cover'}" 
                              alt="${item.title}" 
-                             class="max-w-full max-h-full object-contain shadow-md group-hover:scale-105 transition-transform duration-700"
+                             class="max-w-full max-h-full object-contain shadow-sm group-hover:scale-105 transition-transform duration-700"
                              onerror="this.src='https://via.placeholder.com/400x300?text=Cover+Unavailable'">
-                        <div class="absolute top-5 left-5 text-[10px] sans font-bold text-stone-300 uppercase tracking-widest">
-                            ID: ${item.book}
+                        <div class="absolute top-4 left-4 text-[9px] sans font-bold text-stone-300 uppercase tracking-widest">
+                            Ref: ${item.book}
                         </div>
                     </div>
                     
-                    <div class="p-8 flex-1 flex flex-col border-t border-stone-50">
-                        <div class="text-[11px] sans font-bold text-amber-800 tracking-[0.2em] uppercase mb-2">${item.unit}</div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-8 leading-relaxed line-clamp-2">${item.title}</h3>
+                    <div class="p-6 md:p-8 flex-1 flex flex-col border-t border-stone-50">
+                        <div class="text-[10px] md:text-[11px] sans font-bold text-amber-800 tracking-[0.2em] uppercase mb-2">${item.unit}</div>
+                        <h3 class="text-lg md:text-xl font-bold text-slate-800 mb-6 md:mb-8 leading-relaxed line-clamp-2">${item.title}</h3>
                         <div class="mt-auto">
                             <a href="${item.link}" target="_blank" onclick="playClick()"
-                               class="sans flex items-center justify-between w-full border-2 border-stone-100 text-stone-600 font-bold py-4 px-6 rounded-xl hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all group/btn shadow-sm">
+                               class="sans flex items-center justify-between w-full border-2 border-stone-100 text-stone-600 font-bold py-3 md:py-4 px-5 md:px-6 rounded-xl hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all group/btn shadow-sm text-sm md:text-base">
                                 <span>立即閱讀</span>
-                                <i data-lucide="arrow-right" class="w-5 h-5 group-hover/btn:translate-x-1 transition-transform"></i>
+                                <i data-lucide="arrow-right" class="w-4 h-4 md:w-5 md:h-5 group-hover/btn:translate-x-1 transition-transform"></i>
                             </a>
                         </div>
                     </div>
@@ -475,7 +457,6 @@
             }
         });
 
-        // 頁面加載時立即執行資料獲取與預載入
         fetchData();
     </script>
 </body>
